@@ -24,7 +24,7 @@ WORKDIR /app
 EXPOSE 10000
 
 # Run WebDAV using Render's $PORT env var
-CMD ["sh", "-c", "rclone serve webdav multirun: \
+CMD ["sh", "-c", "rclone serve http multirun: \
   --addr :${PORT:-10000} \
   --vfs-cache-mode full \
   --vfs-cache-max-size 18G \
