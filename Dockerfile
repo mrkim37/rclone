@@ -35,7 +35,7 @@ logfile=/dev/null\n\
 pidfile=/var/run/supervisord.pid\n\
 \n\
 [program:rclone]\n\
-command=rclone serve http multirun: --addr :8000 --vfs-cache-mode full --vfs-cache-max-size 18G --vfs-cache-max-age 3h --vfs-read-chunk-size 128M --vfs-read-chunk-size-limit off --buffer-size 128M --dir-cache-time 2h --poll-interval 10s --transfers 4 --checkers 8 --fast-list\n\
+command=rclone serve http multirun: --addr :8000 --vfs-cache-mode off --no-modtime --no-checksum --buffer-size 0 --use-mmap --fast-list\n\
 autostart=true\n\
 autorestart=true\n\
 stdout_logfile=/dev/stdout\n\
