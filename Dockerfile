@@ -35,7 +35,7 @@ logfile=/dev/null\n\
 pidfile=/var/run/supervisord.pid\n\
 \n\
 [program:rclone]\n\
-command=rclone serve http multirun: --addr :8000 --vfs-cache-mode off --no-modtime --no-checksum --buffer-size 0 --use-mmap --fast-list\n\
+command=rclone serve s3 s3test: --addr :8000 --auth-key AKIAIOSFODNN7EXAMPLE,wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMPLEKEY --vfs-cache-mode off --no-modtime --no-checksum --buffer-size 0 --use-mmap --fast-list\n\
 autostart=true\n\
 autorestart=true\n\
 stdout_logfile=/dev/stdout\n\
